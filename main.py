@@ -4,11 +4,11 @@ from Stack import Stack
 newStack = Stack()
 
 # Adding the first node to the list
-newStack.printList()
-newStack.insertFirst(10)
-newStack.printList()
-newStack.insertFirst(20)
-newStack.printList()
+# newStack.printList()
+# newStack.insertFirst(10)
+# newStack.printList()
+# newStack.insertFirst(20)
+# newStack.printList()
 
-
+newStack.validateExpression('(Hola)')
 

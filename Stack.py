@@ -13,9 +13,9 @@ class Stack:
             self.head = newNode
     
     def remove( self ):
-        if self.top != None:
-            current = self.top
-            self.top = current.next
+        if self.head != None:
+            current = self.head
+            self.head = current.next
             current.next = None
 
     def deleteNode( self, val ):
@@ -36,9 +36,41 @@ class Stack:
 
     def printList( self ):
         current = self.head
-        if current != None:
+        while current != None:
             print( "LIST HAS BEEN UPDATED, LOOK DOWN!" )
             print( current.val )
             current = current.next
-        elif current == None:
-            print( "NOTHING ON THE LIST BY THE MOMENT" )
+
+# Write a function called validateExpression.
+    def validateExpression(self, wordString):
+        parentheses = []
+        argumentString = str(wordString) # This function receives a string as an argument
+        for i in wordString:
+            if i == '(':
+                parentheses.append(i)
+            else:
+                if not parentheses:
+                    print(wordString, "Contains invalid parentheses")
+                    return
+                else:
+                    top = parentheses[-1]
+                    if i == ')' and top == '(':
+                        parentheses.pop()
+
+        if not parentheses:
+            print(wordString, "contains valid parentheses.")
+        else:
+            print(wordString, "contains invalid parentheses.")
+
+# You must validate that the string has implemented parentesis
+# correctly in a formula
+
+# BONUS, validate that it has square brackets and curly braces implemented correctly as well
+
+# x*(x+z) + x/(y-z) + d should return true
+# t – (s-k + x should return false
+# ((x + y) * (x + 7)) / )y( should return false
+# (((x+z)/(x*y)) + 4 ) should return true
+# x + y / ) z + 1 ( * (r - z) should return false
+# (b - a) * ) c / 4 ( * (c + b) should return false
+# (b - a) * ) c / 4 ( * (c + b)) should return false
