@@ -74,3 +74,43 @@ class Stack:
 # x + y / ) z + 1 ( * (r - z) should return false
 # (b - a) * ) c / 4 ( * (c + b) should return false
 # (b - a) * ) c / 4 ( * (c + b)) should return false
+
+# def validateExpression( formula ):
+#     parenthesisStack = Stack()
+
+#     for current in formula:
+#         if current == "(" or current == "[" or current == "{":
+#             parenthesisStack.insert( current )
+#         if current == ")":
+#             if parenthesisStack.isEmpty():
+#                 return False
+#             else:
+#                 if parenthesisStack.top.val == "(":
+#                     parenthesisStack.remove()
+#                 else:
+#                     return False
+#         if current == "]":
+#             if parenthesisStack.isEmpty():
+#                 return False
+#             else:
+#                 if parenthesisStack.top.val == "[":
+#                     parenthesisStack.remove()
+#                 else:
+#                     return False
+#         if current == "}":
+#             if parenthesisStack.isEmpty():
+#                 return False
+#             else:
+#                 if parenthesisStack.top.val == "{":
+#                     parenthesisStack.remove()
+#                 else:
+#                     return False
+
+#     if parenthesisStack.isEmpty():
+#         return True
+#     else:
+#         return False
+    
+
+# result = validateExpression( "(b - a) * ) c / 4 ( * (c + b)" )
+# print( result )
