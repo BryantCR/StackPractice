@@ -62,6 +62,12 @@ class Stack:
         else:
             print(wordString, "contains invalid parentheses.")
 
+    def isEmpty( self ):
+        if self.head == None:
+            return True
+        else:
+            return False
+
 # You must validate that the string has implemented parentesis
 # correctly in a formula
 
